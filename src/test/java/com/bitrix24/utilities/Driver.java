@@ -11,19 +11,20 @@ import org.openqa.selenium.safari.SafariDriver;
 public class Driver {
     private static WebDriver driver;
 
-    private Driver(){
+    private Driver() {
 
     }
-    public static WebDriver getDriver(){
 
-        if(driver==null){
+    public static WebDriver getDriver() {
+
+        if (driver == null) {
             String browser = ConfigurationReader.getProperty("browser");
-            switch (browser){
+            switch (browser) {
                 case "chrome":
                     WebDriverManager.chromedriver().version("79").setup();
                     ChromeOptions chromeOptions = new ChromeOptions();
                     chromeOptions.addArguments("--start-maximized");
-                    driver= new ChromeDriver(chromeOptions);
+                    driver = new ChromeDriver(chromeOptions);
                     break;
                 case "chromeHeadless":
                     WebDriverManager.chromedriver().version("79").setup();
@@ -33,7 +34,7 @@ public class Driver {
                     break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
-                    driver= new FirefoxDriver();
+                    driver = new FirefoxDriver();
                     break;
                 case "safari":
                     driver = new SafariDriver();
@@ -42,12 +43,14 @@ public class Driver {
                     throw new RuntimeException("Wrong browser name");
             }
         }
-             return driver;
+        return driver;
     }
-    public static void closeDriver(){
-        if(driver!=null){
+
+    public static void closeDriver() {
+        if (driver != null) {
             driver.quit();
-            driver=null;
+            driver = null;
         }
     }
+}
 
