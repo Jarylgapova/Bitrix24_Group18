@@ -1,7 +1,10 @@
 package com.bitrix24.utilities;
 
+<<<<<<< HEAD
 
 import com.bitrix24.utilities.ConfigurationReader;
+=======
+>>>>>>> 5b35f086e373c54756c1bcd1c55c23f2f43b4639
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,6 +13,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 public class Driver {
+
     private static WebDriver driver;
 
     private Driver(){
@@ -43,7 +47,7 @@ public class Driver {
                     throw new RuntimeException("Wrong browser name");
             }
         }
-             return driver;
+        return driver;
     }
     public static void closeDriver(){
         if(driver!=null){
@@ -52,4 +56,3 @@ public class Driver {
         }
     }
 }
-
