@@ -1,10 +1,7 @@
 package com.bitrix24.utilities;
 
-<<<<<<< HEAD
 
 import com.bitrix24.utilities.ConfigurationReader;
-=======
->>>>>>> 5b35f086e373c54756c1bcd1c55c23f2f43b4639
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
