@@ -65,4 +65,8 @@ public abstract class TestBase {
         }
         Driver.closeDriver();
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> e16cfd029d36eb681c02d3683efaa4c8c1c4a9bd

@@ -26,4 +26,8 @@ public class LoginTest extends TestBase {
         test.pass("Success");
 
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> e16cfd029d36eb681c02d3683efaa4c8c1c4a9bd
