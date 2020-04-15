@@ -23,8 +23,8 @@ public abstract class TestBase {
 
     @BeforeTest
     @Parameters("reportName")
-    public void setupTest(@Optional String reportName){
-        reportName = reportName == null ? "report.html" : reportName+".html";
+    public void setupTest(@Optional String reportName) {
+        reportName = reportName == null ? "report.html" : reportName + ".html";
         report = new ExtentReports();
         String reportPath = "";
 
@@ -38,17 +38,18 @@ public abstract class TestBase {
         report.attachReporter(htmlReporter);
         htmlReporter.config().setReportName("Bitrix 24 Group 18");
     }
+
     @AfterTest
-    public void tearDownTest(){
+    public void tearDownTest() {
         report.flush(); //to release a report
 
     }
 
     @BeforeMethod
-    public void setup(){
+    public void setup() {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
         Driver.getDriver().manage().window().maximize();
-        wait = new WebDriverWait(Driver.getDriver(),15);
+        wait = new WebDriverWait(Driver.getDriver(), 15);
         actions = new Actions(Driver.getDriver());
 
 
@@ -56,7 +57,7 @@ public abstract class TestBase {
 
     @AfterMethod
     public void teardown(ITestResult iTestResult) throws IOException {
-        if(iTestResult.getStatus() == ITestResult.FAILURE){
+        if (iTestResult.getStatus() == ITestResult.FAILURE) {
             String screenshotPath = BrowserUtils.getScreenshot(iTestResult.getName());
             BrowserUtils.wait(2);
             test.addScreenCaptureFromPath(screenshotPath);
@@ -65,8 +66,4 @@ public abstract class TestBase {
         }
         Driver.closeDriver();
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> e16cfd029d36eb681c02d3683efaa4c8c1c4a9bd
