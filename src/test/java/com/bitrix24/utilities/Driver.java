@@ -1,6 +1,7 @@
 package com.bitrix24.utilities;
 
 
+import com.bitrix24.utilities.ConfigurationReader;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,13 +22,13 @@ public class Driver {
             String browser = ConfigurationReader.getProperty("browser");
             switch (browser){
                 case "chrome":
-                    WebDriverManager.chromedriver().version("80").setup();
+                    WebDriverManager.chromedriver().version("81").setup();
                     ChromeOptions chromeOptions = new ChromeOptions();
                     chromeOptions.addArguments("--start-maximized");
                     driver= new ChromeDriver(chromeOptions);
                     break;
                 case "chromeHeadless":
-                    WebDriverManager.chromedriver().version("79").setup();
+                    WebDriverManager.chromedriver().version("81").setup();
                     ChromeOptions options = new ChromeOptions();
                     options.setHeadless(true);
                     driver = new ChromeDriver(options);
