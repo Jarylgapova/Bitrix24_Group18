@@ -26,7 +26,7 @@ public class LoginTest extends TestBase {
         LoginPage loginPage = new LoginPage();
         loginPage.login();
         BrowserUtils.waitForPageToLoad(20);
-        loginPage.navigateTo("Drive");
+     //   loginPage.navigateTo("Drive");
         Assert.assertEquals(Driver.getDriver().getTitle(),"My Drive");
         test.pass("Success");
 
