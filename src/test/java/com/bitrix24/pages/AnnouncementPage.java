@@ -1,4 +1,4 @@
-package com.bitrix24.pages.esra;
+package com.bitrix24.pages;
 
 import com.bitrix24.pages.PageBase;
 import com.bitrix24.utilities.BrowserUtils;

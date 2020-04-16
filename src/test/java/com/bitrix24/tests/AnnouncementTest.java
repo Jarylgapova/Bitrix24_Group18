@@ -1,6 +1,6 @@
-package com.bitrix24.tests.esra;
+package com.bitrix24.tests;
 
-import com.bitrix24.pages.esra.AnnouncementPage;
+import com.bitrix24.pages.AnnouncementPage;
 import com.bitrix24.pages.LoginPage;
 import com.bitrix24.tests.TestBase;
 import com.bitrix24.utilities.BrowserUtils;
