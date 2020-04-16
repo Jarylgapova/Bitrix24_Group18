@@ -7,13 +7,13 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends PageBase {
 
-    @FindBy (name = "USER_LOGIN")
+    @FindBy(name = "USER_LOGIN")
     private WebElement username;
 
-    @FindBy (name = "USER_PASSWORD")
+    @FindBy(name = "USER_PASSWORD")
     private WebElement password;
 
-    @FindBy (className = "login-btn")
+    @FindBy(className = "login-btn")
     private WebElement loginButton;
 
     public void login(String userName, String passWord) {
@@ -22,14 +22,12 @@ public class LoginPage extends PageBase {
 
     }
 
-    public void login(){
+    public void login() {
         username.sendKeys(ConfigurationReader.getProperty("username"));
-        password.sendKeys(ConfigurationReader.getProperty("password"),Keys.ENTER);
+        password.sendKeys(ConfigurationReader.getProperty("password"), Keys.ENTER);
 
     }
 
 
-
-
-
 }
+
