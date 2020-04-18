@@ -5,7 +5,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class LoginPage extends PageBase {
+public class LoginPage  {
 
     @FindBy(name = "USER_LOGIN")
     private WebElement username;
