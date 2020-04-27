@@ -26,6 +26,7 @@ public class HomePage extends PageBase {
 
 
 
+
     public void clickMacIconToDownloadApp(){
         BrowserUtils.wait(2);
         wait.until(ExpectedConditions.elementToBeClickable(macButton)).click();

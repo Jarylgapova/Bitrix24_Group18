@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class AllPage extends PageBase{
+public class MessageBoxPage extends PageBase{
 
     private WebDriver driver = Driver.getDriver();
 
@@ -14,7 +14,7 @@ public class AllPage extends PageBase{
     @FindBy(css = "[class='feed-add-post-title']")
     public WebElement topic;
 
-    @FindBy(css = "[class='feed-add-post-form-title-btn'")
+    @FindBy(css = "[class='feed-add-post-form-title-btn']")
     public WebElement topicBtn;
 
 
