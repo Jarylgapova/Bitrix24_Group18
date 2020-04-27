@@ -1,6 +1,6 @@
 package com.bitrix24.tests.karima;
 
-import com.bitrix24.pages.AllPage;
+import com.bitrix24.pages.MessageBoxPage;
 import com.bitrix24.pages.LoginPage;
 import com.bitrix24.tests.TestBase;
 import com.bitrix24.utilities.BrowserUtils;
@@ -22,11 +22,11 @@ public class FirstTest extends TestBase {
     public void Test1(){
         test= report.createTest("Verify the Topic text box displays or not");
         LoginPage loginPage = new LoginPage();
-        AllPage allPage = new AllPage();
+        MessageBoxPage messageBoxPage = new MessageBoxPage();
         loginPage.login();
         BrowserUtils.wait(2);
-        allPage.message.click();
-        allPage.topicBtn.click();
+        messageBoxPage.message.click();
+        messageBoxPage.topicBtn.click();
 
         BrowserUtils.wait(2);
 
