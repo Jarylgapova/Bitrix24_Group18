@@ -31,7 +31,6 @@ public class US9AC1MyActivityFilterTest extends TestBase {
         List<WebElement> feedPostUsers = activityStreamPage.getFeedPostUserNames();        
 
         for (WebElement feedPostUser : feedPostUsers) {
-            //print collected usernames for manual verification
             System.out.println("feedPostUser.getText() = " + feedPostUser.getText());
             Assert.assertEquals(feedPostUser.getText(), ConfigurationReader.getProperty("username"));
         }
