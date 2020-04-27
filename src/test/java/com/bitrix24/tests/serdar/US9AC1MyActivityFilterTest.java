@@ -28,9 +28,10 @@ public class US9AC1MyActivityFilterTest extends TestBase {
         loginPage.login();
         activityStreamPage.postMessageToActivityStream();
         activityStreamPage.filterByMyActivity();
-        List<WebElement> feedPostUsers = activityStreamPage.getFeedPostUserNames();
+        List<WebElement> feedPostUsers = activityStreamPage.getFeedPostUserNames();        
 
         for (WebElement feedPostUser : feedPostUsers) {
+            System.out.println("feedPostUser.getText() = " + feedPostUser.getText());
             Assert.assertEquals(feedPostUser.getText(), ConfigurationReader.getProperty("username"));
         }
         test.pass("My Activity Filter successfully verified!");
