@@ -25,6 +25,7 @@ public class US9AC1MyActivityFilterTest extends TestBase {
         LoginPage loginPage = new LoginPage();
         ActivityStreamPage activityStreamPage = new ActivityStreamPage();
 
+        //login
         loginPage.login();
         activityStreamPage.postMessageToActivityStream();
         activityStreamPage.filterByMyActivity();
